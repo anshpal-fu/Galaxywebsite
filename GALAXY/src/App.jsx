@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import CosmicFooter from './components/CosmicFooter.jsx'
-import CosmicBackground from './components/CosmicBackground.jsx'
 import CosmicLoader from './components/CosmicLoader.jsx'
 import Home from './pages/Home.jsx'
 import CosmicAbout from './pages/CosmicAbout.jsx'
@@ -15,7 +14,7 @@ import CosmicNotFound from './pages/CosmicNotFound.jsx'
 function App() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-primary-900 via-primary-800 to-secondary-900">
-      <CosmicBackground />
+      
       <Header />
       <main className="flex-grow">
         <CosmicLoader isLoading={false}>

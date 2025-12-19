@@ -52,6 +52,13 @@ const Home = () => {
     }
   ]
 
+  const stats = [
+    { value: '95%', label: 'Client Satisfaction Rate' },
+    { value: '150+', label: 'Projects Completed' },
+    { value: '45%', label: 'Average Revenue Growth' },
+    { value: '24/7', label: 'Support Available' }
+  ]
+
   const clusters = [
     { 
       title: 'Creative Vision', 
@@ -153,6 +160,20 @@ const Home = () => {
   return (
     <>
       <CosmicHero />
+        
+      {/* Stats */}
+      <section className="section-padding bg-gradient-to-br from-primary-800/30 via-primary-700/20 to-secondary-800/30">
+        <div className="container-custom">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center glass-effect rounded-xl p-6">
+                <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">{stat.value}</div>
+                <div className="text-gray-100">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
                 
       {/* Mission Section */}
       <section className="section-padding bg-gradient-to-br from-primary-900/40 via-primary-800/30 to-secondary-900/40">
