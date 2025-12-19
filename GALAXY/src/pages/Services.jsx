@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import ServiceCard from '../components/ServiceCard.jsx'
+import CosmicServiceCard from '../components/CosmicServiceCard.jsx'
 
 const Services = () => {
   const allServices = [
@@ -174,7 +174,7 @@ const Services = () => {
           {/* Services Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
-              <ServiceCard key={index} {...service} />
+              <CosmicServiceCard key={index} {...service} />
             ))}
           </div>
         </div>

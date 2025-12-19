@@ -1,29 +1,29 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-accent-100: #fef3c7;
-  --color-accent-300: #fcd34d;
-  --color-accent-500: #f59e0b;
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
-  --color-secondary-50: #f0f9ff;
-  --color-secondary-100: #e0f2fe;
-  --color-secondary-200: #bae6fd;
-  --color-secondary-300: #7dd3fc;
-  --color-secondary-400: #38bdf8;
-  --color-secondary-500: #0ea5e9;
-  --color-secondary-600: #0284c7;
-  --color-secondary-700: #0369a1;
-  --color-secondary-800: #075985;
-  --color-secondary-900: #0c4a6e;
+  --color-accent-100: #e0f7ff;
+  --color-accent-300: #7ed6f7;
+  --color-accent-500: #1abde9;
+  --color-primary-50: #0a081f;
+  --color-primary-100: #161235;
+  --color-primary-200: #221c4b;
+  --color-primary-300: #2e2661;
+  --color-primary-400: #3a3077;
+  --color-primary-500: #463a8d;
+  --color-primary-600: #5244a3;
+  --color-primary-700: #5e4ebb;
+  --color-primary-800: #6a58d1;
+  --color-primary-900: #7662e7;
+  --color-secondary-50: #1a004a;
+  --color-secondary-100: #28006e;
+  --color-secondary-200: #360092;
+  --color-secondary-300: #4400b6;
+  --color-secondary-400: #5200da;
+  --color-secondary-500: #702bff;
+  --color-secondary-600: #8d5cff;
+  --color-secondary-700: #aa8cff;
+  --color-secondary-800: #c7bdff;
+  --color-secondary-900: #e4eeff;
   --font-family-display: "Playfair Display", serif;
 }
 
@@ -34,26 +34,26 @@
   }
   
   body {
-    @apply font-sans text-gray-800 bg-white;
+    @apply font-sans text-gray-200 bg-gradient-to-br from-primary-900 via-primary-700 to-secondary-900 min-h-screen;
   }
   
   h1, h2, h3, h4 {
-    @apply font-[family-name:Playfair_Display] font-semibold;
+    @apply font-[family-name:Playfair_Display] font-semibold text-white;
   }
 }
 
 /* Custom components */
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-primary-600 rounded-lg hover:bg-primary-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-secondary-500 to-primary-600 rounded-lg hover:from-secondary-400 hover:to-primary-500 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 shadow-lg;
   }
   
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-primary-600 bg-primary-50 rounded-lg hover:bg-primary-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-primary-600 to-secondary-600 rounded-lg hover:from-primary-500 hover:to-secondary-500 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 shadow-lg;
   }
   
   .btn-outline {
-    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-gray-700 border border-gray-300 rounded-lg hover:border-primary-500 hover:text-primary-600 transition-all duration-300;
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white border border-white/30 rounded-lg hover:border-white hover:text-white transition-all duration-300 backdrop-blur-sm bg-white/10 shadow-lg;
   }
   
   .section-padding {
@@ -69,7 +69,7 @@
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-secondary-200 to-accent-300 bg-clip-text text-transparent;
   }
 }
 
@@ -80,7 +80,7 @@
   }
   
   .glass-effect {
-    @apply backdrop-blur-sm bg-white/80 border border-white/20;
+    @apply backdrop-blur-md bg-white/10 border border-white/20 shadow-xl;
   }
   
   /* Animation classes */
@@ -133,5 +133,18 @@
       opacity: 1;
       transform: translateX(0);
     }
+  }
+  
+  @keyframes spinReverse {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .animate-spin-reverse {
+    animation: spinReverse 1s linear infinite;
   }
 }
