@@ -13,7 +13,7 @@ import CosmicNotFound from './pages/CosmicNotFound.jsx'
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-primary-900 via-primary-800 to-secondary-900">
+    <div className="min-h-screen flex flex-col bg-black">
       
       <Header />
       <main className="flex-grow">
