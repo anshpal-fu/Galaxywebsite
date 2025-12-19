@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import CosmicServiceCard from '../components/CosmicServiceCard.jsx'
 
@@ -123,7 +124,7 @@ const Services = () => {
     }
   ]
 
-  const [activeCategory, setActiveCategory] = React.useState('all')
+  const [activeCategory, setActiveCategory] = useState('all')
 
   const filteredServices = activeCategory === 'all' 
     ? allServices 
@@ -132,13 +133,13 @@ const Services = () => {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden section-padding bg-gradient-to-br from-primary-50 to-secondary-50">
+      <section className="relative overflow-hidden section-padding bg-gradient-to-br from-primary-900 via-primary-800 to-secondary-900">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-[family-name:Playfair_Display] font-bold mb-6">
               Our <span className="gradient-text">Services</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-gray-100 mb-8">
               Comprehensive solutions designed to address your unique challenges and drive meaningful progress across all aspects of your business and personal growth.
             </p>
             <Link to="/contact" className="btn-primary">
@@ -153,7 +154,7 @@ const Services = () => {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold mb-4">Service Categories</h2>
-            <p className="text-gray-600">Explore our specialized solutions by category</p>
+            <p className="text-gray-500">Explore our specialized solutions by category</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {serviceCategories.map((category) => (
@@ -185,7 +186,7 @@ const Services = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold mb-4">Our Process</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               A structured approach that ensures clarity, efficiency, and measurable results at every stage of our engagement.
             </p>
           </div>
@@ -196,7 +197,7 @@ const Services = () => {
                   <div className="text-5xl mb-6">{step.icon}</div>
                   <div className="text-4xl font-bold text-primary-200 mb-4">{step.number}</div>
                   <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
+                  <p className="text-gray-700">{step.description}</p>
                 </div>
                 {index < processSteps.length - 1 && (
                   <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-primary-200"></div>
@@ -213,7 +214,7 @@ const Services = () => {
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold mb-4">Frequently Asked Questions</h2>
-              <p className="text-gray-600">Common questions about our services and process</p>
+              <p className="text-gray-500">Common questions about our services and process</p>
             </div>
             <div className="space-y-6">
               {[

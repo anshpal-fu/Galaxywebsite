@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom'
 import CosmicServiceCard from '../components/CosmicServiceCard.jsx'
 import VenusMeditation from '../components/VenusMeditation.jsx'
 import CosmicHero from '../components/CosmicHero.jsx'
+import CosmicCluster from '../components/CosmicCluster.jsx'
+import CosmicGallery from '../components/CosmicGallery.jsx'
+import CosmicSearch from '../components/CosmicSearch.jsx'
 
 const Home = () => {
   const services = [
@@ -49,30 +52,107 @@ const Home = () => {
     }
   ]
 
-  const stats = [
-    { value: '95%', label: 'Client Satisfaction Rate' },
-    { value: '150+', label: 'Projects Completed' },
-    { value: '45%', label: 'Average Revenue Growth' },
-    { value: '24/7', label: 'Support Available' }
+  const clusters = [
+    { 
+      title: 'Creative Vision', 
+      items: [
+        { type: 'image', icon: '🎨' },
+        { type: 'text', icon: '📝' },
+        { type: 'image', icon: '✨' },
+        { type: 'text', icon: '💡' },
+        { type: 'image', icon: '🌈' },
+        { type: 'text', icon: '✍️' }
+      ],
+      isPrivate: false
+    },
+    { 
+      title: 'Mindfulness Practices', 
+      items: [
+        { type: 'image', icon: '🧘' },
+        { type: 'text', icon: '📿' },
+        { type: 'image', icon: '🌿' },
+        { type: 'text', icon: '📖' },
+        { type: 'image', icon: '🕯️' },
+        { type: 'text', icon: '🎵' }
+      ],
+      isPrivate: true
+    },
+    { 
+      title: 'Business Growth', 
+      items: [
+        { type: 'image', icon: '📈' },
+        { type: 'text', icon: '📊' },
+        { type: 'image', icon: '💼' },
+        { type: 'text', icon: '💰' },
+        { type: 'image', icon: '👥' },
+        { type: 'text', icon: '🚀' }
+      ],
+      isPrivate: false
+    }
+  ]
+
+  const galleryItems = [
+    { 
+      title: 'Venusian Wisdom', 
+      category: 'Inspiration', 
+      type: 'image', 
+      icon: '♀',
+      date: '2023-06-15'
+    },
+    { 
+      title: 'Cosmic Creativity', 
+      category: 'Art', 
+      type: 'image', 
+      icon: '🎨',
+      date: '2023-05-22'
+    },
+    { 
+      title: 'Mindful Moments', 
+      category: 'Practice', 
+      type: 'text', 
+      icon: '🧘',
+      date: '2023-04-18'
+    },
+    { 
+      title: 'Strategic Insights', 
+      category: 'Business', 
+      type: 'text', 
+      icon: '💡',
+      date: '2023-03-30'
+    },
+    { 
+      title: 'Celestial Harmony', 
+      category: 'Music', 
+      type: 'image', 
+      icon: '🎶',
+      date: '2023-02-14'
+    },
+    { 
+      title: 'Growth Journey', 
+      category: 'Personal', 
+      type: 'image', 
+      icon: '🌱',
+      date: '2023-01-05'
+    },
+    { 
+      title: 'Creative Flow', 
+      category: 'Process', 
+      type: 'text', 
+      icon: '🌊',
+      date: '2022-12-20'
+    },
+    { 
+      title: 'Universal Connection', 
+      category: 'Philosophy', 
+      type: 'text', 
+      icon: '🌌',
+      date: '2022-11-11'
+    }
   ]
 
   return (
     <>
       <CosmicHero />
-        
-      {/* Stats */}
-      <section className="section-padding bg-gradient-to-br from-primary-800/30 via-primary-700/20 to-secondary-800/30">
-        <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center glass-effect rounded-xl p-6">
-                <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">{stat.value}</div>
-                <div className="text-gray-100">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
                 
       {/* Mission Section */}
       <section className="section-padding bg-gradient-to-br from-primary-900/40 via-primary-800/30 to-secondary-900/40">
@@ -111,6 +191,46 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Cosmic Search Section */}
+      <section className="section-padding bg-gradient-to-br from-primary-900/40 via-primary-800/30 to-secondary-900/40">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold gradient-text mb-4">Explore the Cosmic Universe</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover insights, inspiration, and wisdom from our curated collection</p>
+          </div>
+          <div className="mb-12">
+            <CosmicSearch />
+          </div>
+        </div>
+      </section>
+
+      {/* Cosmic Clusters */}
+      <section className="section-padding bg-gradient-to-br from-primary-900/50 via-primary-800/40 to-secondary-900/50">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold gradient-text mb-4">Curated Clusters</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Organized collections of wisdom and inspiration</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {clusters.map((cluster, index) => (
+              <CosmicCluster 
+                key={index}
+                title={cluster.title}
+                items={cluster.items}
+                isPrivate={cluster.isPrivate}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cosmic Gallery */}
+      <section className="section-padding bg-gradient-to-br from-primary-900/40 via-primary-800/30 to-secondary-900/40">
+        <div className="container-custom">
+          <CosmicGallery items={galleryItems} />
         </div>
       </section>
 
