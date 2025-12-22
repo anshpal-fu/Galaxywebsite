@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import ContactForm from '../components/ContactForm.jsx'
 
 const Contact = () => {

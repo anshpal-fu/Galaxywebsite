@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const CosmicGallery = ({ items }) => {
   const [selectedItem, setSelectedItem] = useState(null);

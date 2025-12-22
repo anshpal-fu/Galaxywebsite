@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const CosmicCluster = ({ title, items, isPrivate = false }) => {
   const [isHovered, setIsHovered] = useState(false);
