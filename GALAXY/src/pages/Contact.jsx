@@ -134,26 +134,7 @@ const Contact = () => {
               </div>
 
               {/* Social Media */}
-              <div className="mt-12">
-                <h3 className="font-semibold text-white mb-6">Follow Us</h3>
-                <div className="flex space-x-4">
-                  {[
-                    { icon: '💼', label: 'LinkedIn', url: '#' },
-                    { icon: '🐦', label: 'Twitter', url: '#' },
-                    { icon: '📷', label: 'Instagram', url: '#' },
-                    { icon: '👍', label: 'Facebook', url: '#' }
-                  ].map((social, index) => (
-                    <a
-                      key={index}
-                      href={social.url}
-                      className="w-12 h-12 rounded-xl bg-black/30 border border-cyan-400/30 flex items-center justify-center hover:bg-cyan-400/20 transition-colors duration-300"
-                      aria-label={social.label}
-                    >
-                      <span className="text-xl text-cyan-400">{social.icon}</span>
-                    </a>
-                  ))}
-                </div>
-              </div>
+              
             </div>
 
             {/* Form/Schedule */}
