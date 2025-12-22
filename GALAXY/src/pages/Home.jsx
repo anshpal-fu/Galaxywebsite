@@ -5,6 +5,7 @@ import CosmicHero from '../components/CosmicHero.jsx'
 import CosmicCluster from '../components/CosmicCluster.jsx'
 import CosmicGallery from '../components/CosmicGallery.jsx'
 import CosmicSearch from '../components/CosmicSearch.jsx'
+import ContactForm from '../components/ContactForm.jsx'
 const Home = () => {
   const services = [
     {
@@ -281,7 +282,7 @@ const Home = () => {
               Specialized solutions designed for your unique growth journey. We provide comprehensive support across business, personal, and financial domains.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <CosmicServiceCard key={index} {...service} />
             ))}
@@ -344,6 +345,21 @@ const Home = () => {
         </div>
       </section>
       */}
+
+      {/* Contact Form Section */}
+      <section className="relative section-padding bg-black overflow-hidden">
+        <div className="container-custom relative z-10">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold mb-4 text-white">Get in Touch</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Ready to begin your cosmic journey? Reach out to us and let's discuss how we can help you achieve your goals.
+            </p>
+          </div>
+          <div className="max-w-2xl mx-auto bg-black/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
+            <ContactForm />
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="relative section-padding bg-black overflow-hidden">

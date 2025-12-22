@@ -80,7 +80,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-colors duration-300"
-                placeholder="John Doe"
+                
               />
             </div>
             <div>
@@ -95,7 +95,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-colors duration-300"
-                placeholder="john@example.com"
+                
               />
             </div>
           </div>
@@ -112,7 +112,7 @@ const ContactForm = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-colors duration-300"
-                placeholder="+1 (234) 567-8900"
+                
               />
             </div>
             <div>
@@ -147,21 +147,10 @@ const ContactForm = () => {
               required
               rows={6}
               className="w-full px-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-colors duration-300"
-              placeholder="Tell us about your challenges and goals..."
+              
             />
           </div>
 
-          <div className="flex items-center">
-            <input
-              type="checkbox"
-              id="consent"
-              required
-              className="w-4 h-4 text-cyan-500 rounded focus:ring-cyan-500 bg-black/30 border-cyan-400/30"
-            />
-            <label htmlFor="consent" className="ml-3 text-sm text-gray-300">
-              I consent to Venus Visions contacting me about their services.
-            </label>
-          </div>
 
           <button
             type="submit"

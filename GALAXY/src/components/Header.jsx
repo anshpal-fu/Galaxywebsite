@@ -22,7 +22,7 @@ const Header = () => {
               alt="Venus Visions Logo" 
               className="w-10 h-10 object-contain"
             />
-            <span className="text-lg font-[family-name:Playfair_Display] font-bold gradient-text">
+            <span className="text-xl font-[family-name:Playfair_Display] font-bold gradient-text drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
               Venus Visions
             </span>
           </Link>
@@ -48,8 +48,9 @@ const Header = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors duration-300"
+            aria-label="Toggle navigation menu"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
             </svg>
           </button>

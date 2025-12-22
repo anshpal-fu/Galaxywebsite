@@ -105,7 +105,7 @@ const Contact = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
         
         <div className="container-custom relative z-10">
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {/* Contact Info */}
             <div>
               <h2 className="text-2xl font-[family-name:Playfair_Display] font-bold mb-8 text-white">Contact Information</h2>
@@ -208,7 +208,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ */}
-      {/**
+      {/*
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
@@ -247,7 +247,7 @@ const Contact = () => {
       */}
 
       {/* Map */}
-      {/**
+      {/*
       <section className="bg-white">
         <div className="h-96 bg-gradient-to-r from-primary-100 to-secondary-100 flex items-center justify-center">
           <div className="text-center">
