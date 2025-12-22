@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const CosmicServiceCard = ({ title, description, features, link }) => {
   const [isHovered, setIsHovered] = useState(false);
