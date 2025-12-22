@@ -58,7 +58,7 @@ const CosmicGallery = ({ items }) => {
                   {item.type === 'image' ? (
                     <div className="w-full h-full bg-gradient-to-br from-accent-500/50 to-secondary-500/50"></div>
                   ) : (
-                    <span className="text-3xl">{item.icon || '♀'}</span>
+                    <span className="text-3xl">♀</span>
                   )}
                 </div>
                 <div className="p-3">
@@ -72,7 +72,7 @@ const CosmicGallery = ({ items }) => {
                   {item.type === 'image' ? (
                     <div className="w-full h-full bg-gradient-to-br from-accent-500/50 to-secondary-500/50"></div>
                   ) : (
-                    <span className="text-xl">{item.icon || '♀'}</span>
+                    <span className="text-xl">♀</span>
                   )}
                 </div>
                 <div className="flex-grow">
@@ -107,7 +107,7 @@ const CosmicGallery = ({ items }) => {
                   {selectedItem.type === 'image' ? (
                     <div className="w-full h-full bg-gradient-to-br from-accent-500/50 to-secondary-500/50 rounded-xl"></div>
                   ) : (
-                    <span className="text-6xl">{selectedItem.icon || '♀'}</span>
+                    <span className="text-6xl">♀</span>
                   )}
                 </div>
                 <div className="md:w-1/2">

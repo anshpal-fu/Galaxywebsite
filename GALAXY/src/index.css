@@ -25,6 +25,7 @@
   --color-secondary-800: #c7bdff;
   --color-secondary-900: #e4eeff;
   --font-family-display: "Playfair Display", serif;
+  --font-family-space: "Space Grotesk", sans-serif;
 }
 
 /* Custom base styles */
@@ -146,5 +147,57 @@
   
   .animate-spin-reverse {
     animation: spinReverse 1s linear infinite;
+  }
+  
+  /* New animations for enhanced effects */
+  @keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 5px rgba(100, 200, 255, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(100, 200, 255, 0.8);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(100, 200, 255, 0.5);
+    }
+  }
+  
+  @keyframes twinkle {
+    0% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.2;
+    }
+  }
+  
+  @keyframes cosmicEntrance {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+  
+  .animate-twinkle {
+    animation: twinkle 3s ease-in-out infinite;
+  }
+  
+  .animate-cosmic-entrance {
+    animation: cosmicEntrance 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  }
+  
+  .font-space {
+    font-family: var(--font-family-space);
   }
 }

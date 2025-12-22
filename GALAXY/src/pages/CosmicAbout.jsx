@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const CosmicAbout = () => {
   const [activeTab, setActiveTab] = useState('vision');
@@ -33,23 +34,19 @@ const CosmicAbout = () => {
   const values = [
     {
       title: 'Celestial Harmony',
-      description: 'Balancing earthly ambitions with cosmic wisdom for holistic growth.',
-      icon: '⚖️',
+      description: 'Balancing earthly ambitions with cosmic wisdom for holistic growth.'
     },
     {
       title: 'Creative Awakening',
-      description: 'Unlocking hidden potentials through Venus-inspired innovation.',
-      icon: '✨',
+      description: 'Unlocking hidden potentials through Venus-inspired innovation.'
     },
     {
       title: 'Mindful Transformation',
-      description: 'Guiding conscious evolution through intentional practices.',
-      icon: '🧘',
+      description: 'Guiding conscious evolution through intentional practices.'
     },
     {
       title: 'Universal Connection',
-      description: 'Recognizing our place in the greater cosmic tapestry.',
-      icon: '🌌',
+      description: 'Recognizing our place in the greater cosmic tapestry.'
     },
   ];
 
@@ -57,27 +54,54 @@ const CosmicAbout = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden section-padding">
+        {/* Cosmic particles background */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(12)].map((_, i) => (
+            <div 
+              key={i}
+              className="absolute rounded-full animate-twinkle"
+              style={{
+                backgroundColor: '#e0f7ff',
+                width: `${Math.random() * 3 + 1}px`,
+                height: `${Math.random() * 3 + 1}px`,
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`
+              }}
+            ></div>
+          ))}
+        </div>
+        
         {/* Background image */}
         <div className="absolute inset-0">
           <img 
             src="/moon.jpg" 
             alt="Cosmic Moon Background" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-40"
           />
         </div>
+              
+        {/* Overlay for better text visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
         
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/30 backdrop-blur-sm border border-white/10 text-sm font-medium mb-6 animate-fade-up">
               <span className="mr-2">✨</span> Cosmic Origins
             </div>
-            <h1 className="text-4xl md:text-6xl font-[family-name:Playfair_Display] font-bold text-white mb-6 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
-              Aligned with <span className="gradient-text">Venusian Wisdom</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
-              Our story began among the stars and continues to unfold with each client we guide toward 
-              their cosmic potential.
-            </p>
+            <div className="animate-cosmic-entrance">
+              <div className="inline-block p-6 rounded-2xl bg-black/40 backdrop-blur-sm border border-white/10 mb-6 w-full">
+                <h1 className="text-4xl md:text-6xl font-[family-name:Playfair_Display] font-bold text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] whitespace-nowrap">
+                  Aligned with <span className="gradient-text">Venusian Wisdom</span>
+                </h1>
+              </div>
+              <div className="inline-block p-4 rounded-xl bg-black/30 backdrop-blur-sm border border-white/5 mb-12">
+                <p className="text-xl text-gray-100 max-w-3xl mx-auto drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
+                  Our story began among the stars and continues to unfold with each client we guide toward 
+                  their cosmic potential.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -89,9 +113,12 @@ const CosmicAbout = () => {
           <img 
             src="/8.jpg" 
             alt="Cosmic Background" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-60"
           />
         </div>
+        
+        {/* Overlay for better text visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
         
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto">
@@ -159,8 +186,7 @@ const CosmicAbout = () => {
                   <div className="grid md:grid-cols-2 gap-6 mt-8">
                     {values.map((value, index) => (
                       <div key={index} className="glass-effect rounded-xl p-6">
-                        <div className="text-3xl mb-4">{value.icon}</div>
-                        <h3 className="text-xl font-semibold text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">{value.title}</h3>
+                        <h3 className="text-xl font-semibold text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)] mb-4">{value.title}</h3>
                         <p className="text-gray-100 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">{value.description}</p>
                       </div>
                     ))}
@@ -236,9 +262,12 @@ const CosmicAbout = () => {
           <img 
             src="/8.jpg" 
             alt="Cosmic Background" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-60"
           />
         </div>
+        
+        {/* Overlay for better text visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
         
         <div className="container-custom relative z-10">
           <div className="text-center mb-16">
@@ -266,29 +295,50 @@ const CosmicAbout = () => {
       </section>
 
       {/* Closing CTA */}
-      <section className="section-padding bg-black">
-        <div className="container-custom">
+      <section className="relative section-padding bg-black overflow-hidden">
+        {/* Animated background stars */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(20)].map((_, i) => (
+            <div 
+              key={i}
+              className="absolute rounded-full bg-cyan-400 animate-pulse"
+              style={{
+                width: `${Math.random() * 3 + 1}px`,
+                height: `${Math.random() * 3 + 1}px`,
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                opacity: Math.random() * 0.7 + 0.3,
+                animationDuration: `${Math.random() * 3 + 2}s`
+              }}
+            ></div>
+          ))}
+        </div>
+        
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5"></div>
+        
+        <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm mb-8">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-black/30 backdrop-blur-sm border border-cyan-400/30 mb-8">
               <span className="mr-2">🚀</span>
               Ready to Align with Your <span className="text-white">Cosmic Purpose</span>?
             </div>
             <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold mb-6">
-              Ready to Align with Your <span className="text-accent-300">Cosmic Purpose</span>?
+              Ready to Align with Your <span className="text-cyan-400">Cosmic Purpose</span>?
             </h2>
             <p className="text-xl mb-10 opacity-90 max-w-2xl mx-auto">
               Join countless visionaries who have transformed their lives through Venus-inspired guidance
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-primary bg-accent-500 text-white hover:bg-accent-600 px-8 py-4 text-lg">
-                Begin Your Journey
-              </button>
-              <button className="btn-outline border-white text-white hover:bg-white/10 px-8 py-4 text-lg">
+              <Link to="/contact" className="px-8 py-4 text-lg font-medium rounded-xl bg-gradient-to-r from-cyan-600 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/20">
+                Begin Your Cosmic Journey
+              </Link>
+              <Link to="/contact" className="px-8 py-4 text-lg font-medium rounded-xl border border-cyan-400/50 text-white hover:bg-cyan-400/10 transition-all duration-300 backdrop-blur-sm">
                 Connect With Us
-              </button>
+              </Link>
             </div>
             <p className="mt-8 text-white/80 text-sm">
-              No commitment required • 30-minute consultation • Customized strategy session
+              No commitment required • 30-minute cosmic alignment • Customized Venusian strategy
             </p>
           </div>
         </div>

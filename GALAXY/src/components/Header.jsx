@@ -42,9 +42,6 @@ const Header = () => {
                 {item.name}
               </NavLink>
             ))}
-            <Link to="/contact" className="btn-primary text-sm px-4 py-2">
-              Get Started
-            </Link>
           </nav>
 
           {/* Mobile Menu Button */}

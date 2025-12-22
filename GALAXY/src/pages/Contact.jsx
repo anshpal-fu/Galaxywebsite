@@ -70,24 +70,36 @@ const Contact = () => {
       </section>
 
       {/* Main Content */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
+      <section className="relative section-padding bg-black overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/5.jpg" 
+            alt="Cosmic Background" 
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
+        
+        {/* Overlay for better text visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
+        
+        <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info */}
             <div>
-              <h2 className="text-2xl font-[family-name:Playfair_Display] font-bold mb-8">Contact Information</h2>
+              <h2 className="text-2xl font-[family-name:Playfair_Display] font-bold mb-8 text-white">Contact Information</h2>
               <div className="space-y-8">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-100 to-secondary-100 flex items-center justify-center mr-4">
-                      <span className="text-xl">{info.icon}</span>
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center mr-4 border border-cyan-400/30">
+                      <span className="text-xl text-cyan-400">{info.icon}</span>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-2">{info.title}</h3>
+                      <h3 className="font-semibold text-white mb-2">{info.title}</h3>
                       {info.details.map((detail, idx) => (
-                        <div key={idx} className="text-gray-600">
+                        <div key={idx} className="text-gray-300">
                           {info.link && idx === 0 ? (
-                            <a href={info.link} className="hover:text-primary-600 transition-colors duration-300">
+                            <a href={info.link} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
                               {detail}
                             </a>
                           ) : (
@@ -102,7 +114,7 @@ const Contact = () => {
 
               {/* Social Media */}
               <div className="mt-12">
-                <h3 className="font-semibold text-gray-900 mb-6">Follow Us</h3>
+                <h3 className="font-semibold text-white mb-6">Follow Us</h3>
                 <div className="flex space-x-4">
                   {[
                     { icon: '💼', label: 'LinkedIn', url: '#' },
@@ -113,10 +125,10 @@ const Contact = () => {
                     <a
                       key={index}
                       href={social.url}
-                      className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors duration-300"
+                      className="w-12 h-12 rounded-xl bg-black/30 border border-cyan-400/30 flex items-center justify-center hover:bg-cyan-400/20 transition-colors duration-300"
                       aria-label={social.label}
                     >
-                      <span className="text-xl">{social.icon}</span>
+                      <span className="text-xl text-cyan-400">{social.icon}</span>
                     </a>
                   ))}
                 </div>
@@ -127,60 +139,60 @@ const Contact = () => {
             <div className="lg:col-span-2">
               {activeTab === 'contact' ? (
                 <>
-                  <h2 className="text-2xl font-[family-name:Playfair_Display] font-bold mb-8">Send Us a Message</h2>
+                  <h2 className="text-2xl font-[family-name:Playfair_Display] font-bold mb-8 text-white">Send Us a Message</h2>
                   <ContactForm />
                 </>
               ) : (
                 <>
-                  <h2 className="text-2xl font-[family-name:Playfair_Display] font-bold mb-8">Schedule a Consultation</h2>
-                  <div className="bg-gray-50 rounded-2xl p-8">
+                  <h2 className="text-2xl font-[family-name:Playfair_Display] font-bold mb-8 text-white">Schedule a Consultation</h2>
+                  <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
                     <div className="text-center mb-8">
-                      <div className="w-20 h-20 rounded-full bg-primary-100 flex items-center justify-center mx-auto mb-6">
-                        <span className="text-3xl">📅</span>
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center mx-auto mb-6 border border-cyan-400/30">
+                        <span className="text-3xl text-cyan-400">📅</span>
                       </div>
-                      <h3 className="text-2xl font-semibold mb-4">Book Your Free Consultation</h3>
-                      <p className="text-gray-600">
+                      <h3 className="text-2xl font-semibold mb-4 text-white">Book Your Free Consultation</h3>
+                      <p className="text-gray-300">
                         Choose a time that works for you. We'll discuss your goals and challenges, and explore how we can help.
                       </p>
                     </div>
                     <div className="max-w-md mx-auto">
                       <div className="space-y-4">
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                          <label className="block text-sm font-medium text-gray-300 mb-2">
                             Preferred Date
                           </label>
                           <input
                             type="date"
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-300"
+                            className="w-full px-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-colors duration-300"
                           />
                         </div>
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                          <label className="block text-sm font-medium text-gray-300 mb-2">
                             Preferred Time
                           </label>
-                          <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-300">
-                            <option>Select a time</option>
-                            <option>9:00 AM - 10:00 AM</option>
-                            <option>10:00 AM - 11:00 AM</option>
-                            <option>11:00 AM - 12:00 PM</option>
-                            <option>1:00 PM - 2:00 PM</option>
-                            <option>2:00 PM - 3:00 PM</option>
-                            <option>3:00 PM - 4:00 PM</option>
+                          <select className="w-full px-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-colors duration-300">
+                            <option className="bg-black/80">Select a time</option>
+                            <option className="bg-black/80">9:00 AM - 10:00 AM</option>
+                            <option className="bg-black/80">10:00 AM - 11:00 AM</option>
+                            <option className="bg-black/80">11:00 AM - 12:00 PM</option>
+                            <option className="bg-black/80">1:00 PM - 2:00 PM</option>
+                            <option className="bg-black/80">2:00 PM - 3:00 PM</option>
+                            <option className="bg-black/80">3:00 PM - 4:00 PM</option>
                           </select>
                         </div>
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                          <label className="block text-sm font-medium text-gray-300 mb-2">
                             Consultation Type
                           </label>
-                          <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-300">
-                            <option>Select consultation type</option>
-                            <option>Business Consulting</option>
-                            <option>Life Coaching</option>
-                            <option>Trade Line Services</option>
-                            <option>Not Sure Yet</option>
+                          <select className="w-full px-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-colors duration-300">
+                            <option className="bg-black/80">Select consultation type</option>
+                            <option className="bg-black/80">Business Consulting</option>
+                            <option className="bg-black/80">Life Coaching</option>
+                            <option className="bg-black/80">Trade Line Services</option>
+                            <option className="bg-black/80">Not Sure Yet</option>
                           </select>
                         </div>
-                        <button className="w-full btn-primary py-4">
+                        <button className="w-full py-4 font-medium rounded-xl bg-gradient-to-r from-cyan-600 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/20">
                           Schedule Consultation
                         </button>
                       </div>
@@ -194,6 +206,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ */}
+      {/**
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
@@ -229,8 +242,10 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Map */}
+      {/**
       <section className="bg-white">
         <div className="h-96 bg-gradient-to-r from-primary-100 to-secondary-100 flex items-center justify-center">
           <div className="text-center">
@@ -252,6 +267,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      */}
     </>
   )
 }

@@ -55,36 +55,36 @@ const Home = () => {
     { 
       title: 'Creative Vision', 
       items: [
-        { type: 'image', icon: '🎨' },
-        { type: 'text', icon: '📝' },
-        { type: 'image', icon: '✨' },
-        { type: 'text', icon: '💡' },
-        { type: 'image', icon: '🌈' },
-        { type: 'text', icon: '✍️' }
+        { type: 'image' },
+        { type: 'text' },
+        { type: 'image' },
+        { type: 'text' },
+        { type: 'image' },
+        { type: 'text' }
       ],
       isPrivate: false
     },
     { 
       title: 'Mindfulness Practices', 
       items: [
-        { type: 'image', icon: '🧘' },
-        { type: 'text', icon: '📿' },
-        { type: 'image', icon: '🌿' },
-        { type: 'text', icon: '📖' },
-        { type: 'image', icon: '🕯️' },
-        { type: 'text', icon: '🎵' }
+        { type: 'image' },
+        { type: 'text' },
+        { type: 'image' },
+        { type: 'text' },
+        { type: 'image' },
+        { type: 'text' }
       ],
       isPrivate: true
     },
     { 
       title: 'Business Growth', 
       items: [
-        { type: 'image', icon: '📈' },
-        { type: 'text', icon: '📊' },
-        { type: 'image', icon: '💼' },
-        { type: 'text', icon: '💰' },
-        { type: 'image', icon: '👥' },
-        { type: 'text', icon: '🚀' }
+        { type: 'image' },
+        { type: 'text' },
+        { type: 'image' },
+        { type: 'text' },
+        { type: 'image' },
+        { type: 'text' }
       ],
       isPrivate: false
     }
@@ -95,56 +95,48 @@ const Home = () => {
       title: 'Venusian Wisdom', 
       category: 'Inspiration', 
       type: 'image', 
-      icon: '♀',
       date: '2023-06-15'
     },
     { 
       title: 'Cosmic Creativity', 
       category: 'Art', 
       type: 'image', 
-      icon: '🎨',
       date: '2023-05-22'
     },
     { 
       title: 'Mindful Moments', 
       category: 'Practice', 
       type: 'text', 
-      icon: '🧘',
       date: '2023-04-18'
     },
     { 
       title: 'Strategic Insights', 
       category: 'Business', 
       type: 'text', 
-      icon: '💡',
       date: '2023-03-30'
     },
     { 
       title: 'Celestial Harmony', 
       category: 'Music', 
       type: 'image', 
-      icon: '🎶',
       date: '2023-02-14'
     },
     { 
       title: 'Growth Journey', 
       category: 'Personal', 
       type: 'image', 
-      icon: '🌱',
       date: '2023-01-05'
     },
     { 
       title: 'Creative Flow', 
       category: 'Process', 
       type: 'text', 
-      icon: '🌊',
       date: '2022-12-20'
     },
     { 
       title: 'Universal Connection', 
       category: 'Philosophy', 
       type: 'text', 
-      icon: '🌌',
       date: '2022-11-11'
     }
   ]
@@ -161,9 +153,12 @@ const Home = () => {
           <img 
             src="/mission-bg.jpg" 
             alt="Mission Background" 
-            className="w-full h-full object-cover shadow-2xl"
+            className="w-full h-full object-cover shadow-2xl opacity-60"
           />
         </div>
+              
+        {/* Overlay for better text visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
         
         <div className="container-custom relative z-10">
     <div className="max-w-6xl mx-auto">
@@ -212,10 +207,10 @@ const Home = () => {
 </section>
 
 
-      {/* Cosmic Search Section */}
+      {/* Cosmic Search Section
       <section className="relative overflow-hidden section-padding">
         {/* Background image */}
-        <div className="absolute inset-0">
+        {/* <div className="absolute inset-0">
           <img 
             src="/FreeVectors.jpg" 
             alt="Cosmic Background" 
@@ -232,9 +227,10 @@ const Home = () => {
             <CosmicSearch />
           </div>
         </div>
-      </section>
+      // </section> */} 
 
       {/* Cosmic Clusters */}
+      {/*
       <section className="section-padding bg-gradient-to-br from-primary-900/50 via-primary-800/40 to-secondary-900/50">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -253,13 +249,16 @@ const Home = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Cosmic Gallery */}
+      {/*
       <section className="section-padding bg-gradient-to-br from-primary-900/40 via-primary-800/30 to-secondary-900/40">
         <div className="container-custom">
           <CosmicGallery items={galleryItems} />
         </div>
       </section>
+      */}
 
       {/* Services Section */}
       <section className="relative overflow-hidden section-padding">
@@ -268,9 +267,12 @@ const Home = () => {
           <img 
             src="/Le paysage nocturne des galaxies _ Photo Gratuite.jpg" 
             alt="Cosmic Background" 
-            className="w-full h-full object-cover shadow-2xl"
+            className="w-full h-full object-cover shadow-2xl opacity-60"
           />
         </div>
+              
+        {/* Overlay for better text visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
         
         <div className="container-custom relative z-10">
           <div className="text-center mb-16">
@@ -344,29 +346,50 @@ const Home = () => {
       */}
 
       {/* CTA Section */}
-      <section className="section-padding bg-black">
-        <div className="container-custom">
+      <section className="relative section-padding bg-black overflow-hidden">
+        {/* Animated background stars */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(20)].map((_, i) => (
+            <div 
+              key={i}
+              className="absolute rounded-full bg-cyan-400 animate-pulse"
+              style={{
+                width: `${Math.random() * 3 + 1}px`,
+                height: `${Math.random() * 3 + 1}px`,
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                opacity: Math.random() * 0.7 + 0.3,
+                animationDuration: `${Math.random() * 3 + 2}s`
+              }}
+            ></div>
+          ))}
+        </div>
+        
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5"></div>
+        
+        <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm mb-8">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-black/30 backdrop-blur-sm border border-cyan-400/30 mb-8">
               <span className="mr-2">🚀</span>
-              Ready to Transform Your Business?
+              Ready to Align with Cosmic Forces?
             </div>
             <h2 className="text-3xl md:text-5xl font-[family-name:Playfair_Display] font-bold mb-8">
-              Let's Turn Your Vision into <span className="text-accent-300">Measurable Success</span>
+              Let's Turn Your Vision into <span className="text-cyan-400">Celestial Success</span>
             </h2>
             <p className="text-xl mb-10 opacity-90 max-w-2xl mx-auto">
-              Schedule your free consultation today and discover how our strategic solutions can drive your growth.
+              Schedule your free Venus-aligned consultation today and discover how our cosmic wisdom can elevate your journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="btn-primary bg-accent-500 text-white hover:bg-accent-600 px-8 py-4 text-lg">
-                Start Your Journey
+              <Link to="/contact" className="px-8 py-4 text-lg font-medium rounded-xl bg-gradient-to-r from-cyan-600 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/20">
+                Begin Your Cosmic Journey
               </Link>
-              <Link to="/services" className="btn-outline border-white text-white hover:bg-white/10 px-8 py-4 text-lg">
-                Explore All Services
+              <Link to="/services" className="px-8 py-4 text-lg font-medium rounded-xl border border-cyan-400/50 text-white hover:bg-cyan-400/10 transition-all duration-300 backdrop-blur-sm">
+                Explore Celestial Services
               </Link>
             </div>
             <p className="mt-8 text-white/80 text-sm">
-              No commitment required • 30-minute consultation • Customized strategy session
+              No commitment required • 30-minute cosmic alignment • Customized Venusian strategy
             </p>
           </div>
         </div>
