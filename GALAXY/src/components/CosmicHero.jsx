@@ -2,18 +2,15 @@ import { Link } from 'react-router-dom';
 
 const CosmicHero = () => {
   return (
-    <section className="relative overflow-hidden section-padding bg-black">
+    <section className="relative overflow-hidden section-padding">
       {/* Background image */}
       <div className="absolute inset-0">
         <img 
           src="/Gemini_Generated_Image_mw1vwjmw1vwjmw1v.png" 
           alt="Cosmic Background" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover shadow-2xl"
         />
       </div>
-      
-      {/* Overlay for better text visibility */}
-      <div className="absolute inset-0 bg-black/50"></div>
       
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto text-center">
