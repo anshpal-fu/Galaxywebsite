@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ icon, title, description, link, features }) => {
   return (
