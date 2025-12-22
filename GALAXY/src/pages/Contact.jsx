@@ -34,13 +34,34 @@ const Contact = () => {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden section-padding bg-gradient-to-br from-primary-50 to-secondary-50">
-        <div className="container-custom">
+      <section className="relative section-padding bg-black overflow-hidden">
+        {/* Animated background stars */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(20)].map((_, i) => (
+            <div 
+              key={i}
+              className="absolute rounded-full bg-cyan-400 animate-pulse"
+              style={{
+                width: `${Math.random() * 3 + 1}px`,
+                height: `${Math.random() * 3 + 1}px`,
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                opacity: Math.random() * 0.7 + 0.3,
+                animationDuration: `${Math.random() * 3 + 2}s`
+              }}
+            ></div>
+          ))}
+        </div>
+        
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5"></div>
+        
+        <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-[family-name:Playfair_Display] font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-[family-name:Playfair_Display] font-bold mb-6 text-white">
               Get in <span className="gradient-text">Touch</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Ready to transform your vision into reality? Let's start a conversation about how we can help you achieve your goals.
             </p>
             <div className="flex justify-center space-x-4">

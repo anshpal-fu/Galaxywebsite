@@ -54,14 +54,14 @@ const ContactForm = () => {
   return (
     <div className="max-w-2xl mx-auto">
       {isSubmitted ? (
-        <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
-          <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
-            <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="bg-green-900/30 border border-green-700/50 rounded-xl p-8 text-center">
+          <div className="w-16 h-16 rounded-full bg-green-800/50 flex items-center justify-center mx-auto mb-6 border border-green-600/50">
+            <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h3 className="text-2xl font-semibold text-gray-900 mb-3">Thank You!</h3>
-          <p className="text-gray-600">
+          <h3 className="text-2xl font-semibold text-white mb-3">Thank You!</h3>
+          <p className="text-green-200">
             Your message has been sent successfully. We'll get back to you within 24 hours.
           </p>
         </div>
@@ -69,7 +69,7 @@ const ContactForm = () => {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                 Full Name *
               </label>
               <input
@@ -79,12 +79,12 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-300"
+                className="w-full px-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-colors duration-300"
                 placeholder="John Doe"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                 Email Address *
               </label>
               <input
@@ -94,7 +94,7 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-300"
+                className="w-full px-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-colors duration-300"
                 placeholder="john@example.com"
               />
             </div>
@@ -102,7 +102,7 @@ const ContactForm = () => {
 
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                 Phone Number
               </label>
               <input
@@ -111,12 +111,12 @@ const ContactForm = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-300"
+                className="w-full px-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-colors duration-300"
                 placeholder="+1 (234) 567-8900"
               />
             </div>
             <div>
-              <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                 Service Interested In *
               </label>
               <select
@@ -125,18 +125,18 @@ const ContactForm = () => {
                 value={formData.service}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-300"
+                className="w-full px-4 py-3 bg-black/50 border border-cyan-400/50 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-colors duration-300 backdrop-blur-sm"
               >
-                <option value="">Select a service</option>
+                <option value="" className="bg-black/90 text-gray-200">Select a service</option>
                 {services.map((service) => (
-                  <option key={service} value={service}>{service}</option>
+                  <option key={service} value={service} className="bg-black/90 text-white hover:bg-cyan-500/20">{service}</option>
                 ))}
               </select>
             </div>
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
               Message *
             </label>
             <textarea
@@ -146,7 +146,7 @@ const ContactForm = () => {
               onChange={handleChange}
               required
               rows={6}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-300"
+              className="w-full px-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-colors duration-300"
               placeholder="Tell us about your challenges and goals..."
             />
           </div>
@@ -156,9 +156,9 @@ const ContactForm = () => {
               type="checkbox"
               id="consent"
               required
-              className="w-4 h-4 text-primary-600 rounded focus:ring-primary-500"
+              className="w-4 h-4 text-cyan-500 rounded focus:ring-cyan-500 bg-black/30 border-cyan-400/30"
             />
-            <label htmlFor="consent" className="ml-3 text-sm text-gray-600">
+            <label htmlFor="consent" className="ml-3 text-sm text-gray-300">
               I consent to Venus Visions contacting me about their services.
             </label>
           </div>
@@ -181,7 +181,7 @@ const ContactForm = () => {
             )}
           </button>
 
-          <p className="text-sm text-gray-500 text-center">
+          <p className="text-sm text-gray-400 text-center">
             We'll get back to you within 24 hours. Your information is secure and will never be shared.
           </p>
         </form>
