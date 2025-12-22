@@ -61,7 +61,6 @@ const Tradeline = () => {
     },
     {
       score: '550 → 700',
-      time: '10 months',
       time: '9 months',
       description: 'Cleared collections and built positive payment history'
     }
