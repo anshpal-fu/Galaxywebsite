@@ -1,3 +1,4 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 import CosmicServiceCard from '../components/CosmicServiceCard.jsx'
 import VenusMeditation from '../components/VenusMeditation.jsx'
