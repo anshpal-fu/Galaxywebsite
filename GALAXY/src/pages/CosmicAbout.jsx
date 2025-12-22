@@ -6,7 +6,7 @@ const CosmicAbout = () => {
   const tabs = [
     { id: 'vision', name: 'Our Cosmic Vision' },
     { id: 'mission', name: 'Mission & Values' },
-    { id: 'journey', name: 'Our Journey' },
+    /* { id: 'journey', name: 'Our Journey' }, - Commented out as per user request */
   ];
 
   const teamMembers = [
@@ -56,10 +56,14 @@ const CosmicAbout = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden section-padding bg-gradient-to-br from-primary-900 via-primary-800 to-secondary-900">
+      <section className="relative overflow-hidden section-padding">
+        {/* Background image */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-accent-500/10 blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/3 right-1/3 w-96 h-96 rounded-full bg-secondary-500/10 blur-3xl animate-pulse delay-1000"></div>
+          <img 
+            src="/moon.jpg" 
+            alt="Cosmic Moon Background" 
+            className="w-full h-full object-cover"
+          />
         </div>
         
         <div className="container-custom relative z-10">
@@ -67,10 +71,10 @@ const CosmicAbout = () => {
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-sm font-medium mb-6">
               <span className="mr-2">✨</span> Cosmic Origins
             </div>
-            <h1 className="text-4xl md:text-6xl font-[family-name:Playfair_Display] font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-[family-name:Playfair_Display] font-bold text-white mb-6 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
               Aligned with <span className="gradient-text">Venusian Wisdom</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
               Our story began among the stars and continues to unfold with each client we guide toward 
               their cosmic potential.
             </p>
@@ -79,8 +83,17 @@ const CosmicAbout = () => {
       </section>
 
       {/* Tabbed Content Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-900/70 via-primary-800/60 to-secondary-900/70">
-        <div className="container-custom">
+      <section className="relative overflow-hidden section-padding">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/8.jpg" 
+            alt="Cosmic Background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto">
             {/* Tabs */}
             <div className="flex flex-wrap gap-2 mb-12">
@@ -103,28 +116,28 @@ const CosmicAbout = () => {
             <div className="glass-effect rounded-2xl p-8">
               {activeTab === 'vision' && (
                 <div className="space-y-6">
-                  <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold gradient-text">
+                  <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
                     Our Cosmic Vision
                   </h2>
-                  <p className="text-gray-300 text-lg leading-relaxed">
+                  <p className="text-gray-100 text-lg leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
                     We envision a world where individuals and organizations align with their highest potential 
                     through the harmonious integration of earthly ambition and cosmic wisdom.
                   </p>
-                  <p className="text-gray-300 text-lg leading-relaxed">
+                  <p className="text-gray-100 text-lg leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
                     Inspired by Venus—the planet of beauty, love, and creativity—we believe that true success 
                     emerges when we honor both our material goals and our spiritual essence.
                   </p>
                   <div className="grid md:grid-cols-2 gap-6 mt-8">
                     <div className="glass-effect rounded-xl p-6">
-                      <h3 className="text-xl font-semibold text-white mb-3">Celestial Guidance</h3>
-                      <p className="text-gray-100">
+                      <h3 className="text-xl font-semibold text-white mb-3 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">Celestial Guidance</h3>
+                      <p className="text-gray-100 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
                         Drawing from ancient wisdom and modern insight, we offer pathways that honor both 
                         the practical and the profound.
                       </p>
                     </div>
                     <div className="glass-effect rounded-xl p-6">
-                      <h3 className="text-xl font-semibold text-white mb-3">Holistic Growth</h3>
-                      <p className="text-gray-100">
+                      <h3 className="text-xl font-semibold text-white mb-3 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">Holistic Growth</h3>
+                      <p className="text-gray-100 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
                         We nurture development that encompasses mind, body, spirit, and cosmic connection 
                         for sustainable transformation.
                       </p>
@@ -135,10 +148,10 @@ const CosmicAbout = () => {
 
               {activeTab === 'mission' && (
                 <div className="space-y-6">
-                  <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold gradient-text">
+                  <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
                     Mission & Values
                   </h2>
-                  <p className="text-gray-100 text-lg leading-relaxed">
+                  <p className="text-gray-100 text-lg leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
                     Our mission is to empower visionary leaders and creative souls to unlock their cosmic 
                     potential through mindful strategies and Venusian wisdom.
                   </p>
@@ -147,8 +160,8 @@ const CosmicAbout = () => {
                     {values.map((value, index) => (
                       <div key={index} className="glass-effect rounded-xl p-6">
                         <div className="text-3xl mb-4">{value.icon}</div>
-                        <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                        <p className="text-gray-100">{value.description}</p>
+                        <h3 className="text-xl font-semibold text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">{value.title}</h3>
+                        <p className="text-gray-100 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">{value.description}</p>
                       </div>
                     ))}
                   </div>
@@ -157,6 +170,8 @@ const CosmicAbout = () => {
 
               {activeTab === 'journey' && (
                 <div className="space-y-6">
+                  {/* Our Cosmic Journey content commented out as per user request */}
+                  {/*
                   <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold gradient-text">
                     Our Cosmic Journey
                   </h2>
@@ -206,6 +221,7 @@ const CosmicAbout = () => {
                       </div>
                     </div>
                   </div>
+                  */}
                 </div>
               )}
             </div>
@@ -214,13 +230,22 @@ const CosmicAbout = () => {
       </section>
 
       {/* Team Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-900/80 via-primary-800/70 to-secondary-900/80">
-        <div className="container-custom">
+      <section className="relative overflow-hidden section-padding">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/8.jpg" 
+            alt="Cosmic Background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        <div className="container-custom relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold mb-4">
-              <span className="gradient-text">Cosmic Guides</span>
+              <span className="text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Cosmic Guides</span>
             </h2>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
               Meet the stellar team dedicated to illuminating your path through Venusian wisdom
             </p>
           </div>
@@ -229,11 +254,11 @@ const CosmicAbout = () => {
             {teamMembers.map((member, index) => (
               <div key={index} className="glass-effect rounded-2xl p-8 text-center card-hover">
                 <div className="text-6xl mb-6">{member.image}</div>
-                <h3 className="text-2xl font-[family-name:Playfair_Display] font-bold text-white mb-2">
+                <h3 className="text-2xl font-[family-name:Playfair_Display] font-bold text-white mb-2 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
                   {member.name}
                 </h3>
-                <p className="text-accent-300 font-medium mb-4">{member.role}</p>
-                <p className="text-gray-100">{member.bio}</p>
+                <p className="text-accent-300 font-medium mb-4 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">{member.role}</p>
+                <p className="text-gray-100 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">{member.bio}</p>
               </div>
             ))}
           </div>
@@ -241,23 +266,30 @@ const CosmicAbout = () => {
       </section>
 
       {/* Closing CTA */}
-      <section className="section-padding bg-gradient-to-r from-primary-800 via-secondary-700 to-accent-500">
+      <section className="section-padding bg-black">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold mb-6">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm mb-8">
+              <span className="mr-2">🚀</span>
               Ready to Align with Your <span className="text-white">Cosmic Purpose</span>?
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold mb-6">
+              Ready to Align with Your <span className="text-accent-300">Cosmic Purpose</span>?
             </h2>
-            <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+            <p className="text-xl mb-10 opacity-90 max-w-2xl mx-auto">
               Join countless visionaries who have transformed their lives through Venus-inspired guidance
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-primary bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 text-lg">
+              <button className="btn-primary bg-accent-500 text-white hover:bg-accent-600 px-8 py-4 text-lg">
                 Begin Your Journey
               </button>
               <button className="btn-outline border-white text-white hover:bg-white/10 px-8 py-4 text-lg">
                 Connect With Us
               </button>
             </div>
+            <p className="mt-8 text-white/80 text-sm">
+              No commitment required • 30-minute consultation • Customized strategy session
+            </p>
           </div>
         </div>
       </section>

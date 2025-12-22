@@ -15,7 +15,7 @@ const CosmicCluster = ({ title, items, isPrivate = false }) => {
       
       <div className="relative z-10">
         <div className="flex justify-between items-start mb-4">
-          <h3 className="text-xl font-[family-name:Playfair_Display] font-bold gradient-text">
+          <h3 className="text-xl font-[family-name:Playfair_Display] font-bold text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
             {title}
           </h3>
           {isPrivate && (

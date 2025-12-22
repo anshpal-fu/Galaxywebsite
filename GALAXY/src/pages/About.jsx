@@ -3,108 +3,123 @@ import { Link } from 'react-router-dom'
 const About = () => {
   const values = [
     {
-      title: 'Integrity First',
-      description: 'We operate with complete transparency and honesty in all our dealings.',
-      icon: '🔒'
+      title: 'Celestial Harmony',
+      description: 'Balancing earthly ambitions with cosmic wisdom for holistic growth.',
+      icon: '⚖️'
     },
     {
-      title: 'Client Empowerment',
-      description: 'Our goal is to equip you with the tools and knowledge for lasting success.',
-      icon: '🚀'
+      title: 'Creative Awakening',
+      description: 'Unlocking hidden potentials through Venus-inspired innovation.',
+      icon: '✨'
     },
     {
-      title: 'Innovative Thinking',
-      description: 'We challenge conventional approaches to find creative solutions.',
-      icon: '💡'
+      title: 'Mindful Transformation',
+      description: 'Guiding conscious evolution through intentional practices.',
+      icon: '🧘'
     },
     {
-      title: 'Sustainable Results',
-      description: 'We focus on long-term impact rather than quick fixes.',
-      icon: '🌱'
+      title: 'Universal Connection',
+      description: 'Recognizing our place in the greater cosmic tapestry.',
+      icon: '🌌'
     }
   ]
 
   const team = [
     {
-      name: 'Alonzo Hayes',
-      role: 'Founder & CEO',
-      bio: 'With 15+ years in business consulting and personal development.',
-      avatar: 'AH'
+      name: 'Lyra Starweaver',
+      role: 'Chief Cosmic Officer',
+      bio: 'Bringing 15 years of experience in celestial alignment and cosmic strategy.',
+      avatar: '👩‍🚀'
     },
     {
-      name: 'Alex Morgan',
-      role: 'Lead Consultant',
-      bio: 'Specialized in strategic planning and operational excellence.',
-      avatar: 'AM'
+      name: 'Orion Lightbringer',
+      role: 'Creative Director',
+      bio: 'Specializes in transforming earthly challenges into stellar opportunities.',
+      avatar: '👨‍🎨'
     },
     {
-      name: 'Jordan Lee',
-      role: 'Life Coach',
-      bio: 'Expert in leadership development and mindset transformation.',
-      avatar: 'JL'
+      name: 'Nova Dreamwalker',
+      role: 'Mindfulness Guide',
+      bio: 'Helps clients navigate their inner cosmos through meditation and awareness.',
+      avatar: '🧘‍♀️'
     }
   ]
 
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden section-padding bg-gradient-to-br from-primary-50 to-secondary-50">
-        <div className="container-custom">
+      <section className="relative overflow-hidden section-padding">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/moon.jpg" 
+            alt="Cosmic Moon Background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-[family-name:Playfair_Display] font-bold mb-6">
-              About <span className="gradient-text">Venus Visions</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-sm font-medium mb-6">
+              <span className="mr-2">✨</span> Cosmic Origins
+            </div>
+            <h1 className="text-4xl md:text-5xl font-[family-name:Playfair_Display] font-bold text-white mb-6 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
+              Aligned with <span className="gradient-text">Venusian Wisdom</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              We're more than consultants—we're your strategic partners in growth, dedicated to transforming visions into measurable progress.
+            <p className="text-xl text-gray-300 mb-8 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
+              Our story began among the stars and continues to unfold with each client we guide toward 
+              their cosmic potential.
             </p>
           </div>
         </div>
       </section>
 
       {/* Story */}
-      <section className="section-padding bg-white">
+      {/*
+      <section className="section-padding bg-gradient-to-br from-primary-900/70 via-primary-800/60 to-secondary-900/70">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold mb-6">Our Story</h2>
-              <div className="space-y-6 text-gray-700">
+              <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold mb-6 text-white">Our Cosmic Journey</h2>
+              <div className="space-y-6 text-gray-100">
                 <p className="text-lg">
-                  Venus Visions was founded on a simple yet powerful idea: every business and individual has untapped potential waiting to be realized. We noticed that many organizations had brilliant ideas but struggled to execute them effectively.
+                  Venus Visions was founded on a profound cosmic principle: every being has untapped celestial potential waiting to be realized. We observed that many individuals and organizations possessed brilliant ideas but struggled to align them with universal energies.
                 </p>
                 <p>
-                  Our founder, Alonzo Hayes, spent years observing how businesses with great potential were held back by operational inefficiencies, communication breakdowns, and lack of strategic clarity. This led to the creation of Venus Visions—a consultancy that combines business strategy with personal development.
+                  Our founder, Lyra Starweaver, spent years studying the intersection of earthly ambition and cosmic wisdom. This led to the creation of Venus Visions—a consultancy that combines strategic business acumen with spiritual alignment.
                 </p>
                 <p>
-                  Today, we serve clients across industries, helping them see what others may overlook and transforming that vision into tangible, measurable progress.
+                  Today, we serve clients across dimensions, helping them perceive what others may overlook and transforming that vision into tangible, measurable cosmic progress.
                 </p>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl p-8">
-              <div className="text-6xl mb-6">👁️</div>
-              <h3 className="text-2xl font-semibold mb-4">Why "Venus Visions"?</h3>
-              <p className="text-gray-700">
-                In Roman mythology, Venus was the goddess of love, beauty, and prosperity. We chose this name because it represents our core belief: when you have the right vision—clear, beautiful, and focused on growth—prosperity naturally follows.
+            <div className="glass-effect rounded-2xl p-8">
+              <div className="text-6xl mb-6">✨</div>
+              <h3 className="text-2xl font-semibold mb-4 text-white">Why "Venus Visions"?</h3>
+              <p className="text-gray-100">
+                In celestial mythology, Venus represents love, beauty, and prosperity. We chose this name because it embodies our core belief: when you align with the right cosmic vision—clear, beautiful, and focused on universal growth—prosperity naturally flows.
               </p>
             </div>
           </div>
         </div>
       </section>
+      */}
 
       {/* Values */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-gradient-to-br from-primary-900/80 via-primary-800/70 to-secondary-900/80">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold mb-4">Our Core Values</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">The principles that guide every decision we make and every solution we provide</p>
+            <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold mb-4 text-white">Our Cosmic Principles</h2>
+            <p className="text-gray-100 max-w-2xl mx-auto">The celestial foundations that guide our cosmic journey and every solution we provide</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 card-hover text-center">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center mx-auto mb-6">
+              <div key={index} className="glass-effect rounded-xl p-6 card-hover text-center">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-accent-500/30 to-secondary-500/30 flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl text-white">{value.icon}</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-white">{value.title}</h3>
+                <p className="text-gray-100">{value.description}</p>
               </div>
             ))}
           </div>
@@ -112,34 +127,34 @@ const About = () => {
       </section>
 
       {/* Mission Statement */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gradient-to-br from-primary-900/70 via-primary-800/60 to-secondary-900/70">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 md:p-12 text-white">
-            <div className="text-4xl mb-6">🎯</div>
-            <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold mb-6">Our Mission</h2>
-            <blockquote className="text-xl italic mb-8">
-              "To empower businesses and individuals by delivering creative, strategic solutions to complex challenges."
+          <div className="max-w-4xl mx-auto glass-effect rounded-2xl p-8 md:p-12">
+            <div className="text-4xl mb-6 text-accent-300">✨</div>
+            <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold mb-6 text-white">Our Cosmic Mission</h2>
+            <blockquote className="text-xl italic mb-8 text-gray-100">
+              "To empower beings by aligning earthly ambitions with celestial wisdom, delivering creative solutions to universal challenges."
             </blockquote>
             <div className="space-y-4">
-              <p>We believe in:</p>
+              <p className="text-gray-100">We believe in:</p>
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <svg className="w-5 h-5 mr-3 text-accent-300" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span>Helping organizations overcome obstacles with innovative perspectives</span>
+                  <span>Helping beings overcome obstacles with cosmic perspectives</span>
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 mr-3 text-accent-300" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span>Strengthening operations for sustainable growth</span>
+                  <span>Strengthening universal connections for sustainable growth</span>
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 mr-3 text-accent-300" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span>Building strong businesses through empowered individuals</span>
+                  <span>Building strong communities through empowered individuals</span>
                 </li>
               </ul>
             </div>

@@ -5,7 +5,6 @@ import CosmicHero from '../components/CosmicHero.jsx'
 import CosmicCluster from '../components/CosmicCluster.jsx'
 import CosmicGallery from '../components/CosmicGallery.jsx'
 import CosmicSearch from '../components/CosmicSearch.jsx'
-
 const Home = () => {
   const services = [
     {
@@ -50,13 +49,6 @@ const Home = () => {
       role: "Small Business Owner",
       avatar: "DR"
     }
-  ]
-
-  const stats = [
-    { value: '95%', label: 'Client Satisfaction Rate' },
-    { value: '150+', label: 'Projects Completed' },
-    { value: '45%', label: 'Average Revenue Growth' },
-    { value: '24/7', label: 'Support Available' }
   ]
 
   const clusters = [
@@ -160,67 +152,81 @@ const Home = () => {
   return (
     <>
       <CosmicHero />
-        
-      {/* Stats */}
-      <section className="section-padding bg-gradient-to-br from-primary-800/30 via-primary-700/20 to-secondary-800/30">
-        <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center glass-effect rounded-xl p-6">
-                <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">{stat.value}</div>
-                <div className="text-gray-100">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
                 
       {/* Mission Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-900/40 via-primary-800/30 to-secondary-900/40">
-        <div className="container-custom">
-          <div className="max-w-6xl mx-auto">
-            <div className="glass-effect rounded-2xl p-8 md:p-12 shadow-lg">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-8 mb-8">
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-secondary-500 to-accent-500 flex items-center justify-center flex-shrink-0">
-                  <span className="text-3xl text-white">👁️</span>
-                </div>
-                <div>
-                  <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold mb-4">Our Mission</h2>
-                  <p className="text-lg text-gray-200">
-                    At Venus Visions, our mission is to empower businesses and individuals by delivering creative, 
-                    strategic solutions to complex challenges. We are deeply passionate about helping organizations 
-                    that seek innovative perspectives to overcome their current obstacles, strengthen their operations, 
-                    and achieve sustainable growth.
-                  </p>
-                </div>
-              </div>
-              <div className="border-t border-gray-700 pt-8">
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div>
-                    <h4 className="font-semibold text-white mb-3">Clear Communication</h4>
-                    <p className="text-gray-300">Transparent dialogue that builds trust and understanding</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-white mb-3">Strategic Insight</h4>
-                    <p className="text-gray-300">Data-driven decisions that create competitive advantages</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-white mb-3">System Integration</h4>
-                    <p className="text-gray-300">Understanding how people and systems interact for optimal results</p>
-                  </div>
-                </div>
-              </div>
+      <section className="relative overflow-hidden section-padding">
+        
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/mission-bg.jpg" 
+            alt="Mission Background" 
+            className="w-full h-full object-cover shadow-2xl"
+          />
+        </div>
+        
+        <div className="container-custom relative z-10">
+    <div className="max-w-6xl mx-auto">
+      <div className="glass-effect rounded-2xl p-8 md:p-12 shadow-lg">
+
+        <div className="text-center mb-8">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold mb-4">
+              Our Mission
+            </h2>
+            <p className="text-lg text-gray-200">
+              At Venus Visions, our mission is to empower businesses and individuals by delivering creative,
+              strategic solutions to complex challenges.
+            </p>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-700 pt-8">
+          <div className="grid md:grid-cols-3 gap-6">
+            <div>
+              <h4 className="font-semibold text-white mb-3">Clear Communication</h4>
+              <p className="text-gray-300">
+                Transparent dialogue that builds trust and understanding
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-white mb-3">Strategic Insight</h4>
+              <p className="text-gray-300">
+                Data-driven decisions that create competitive advantages
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-white mb-3">System Integration</h4>
+              <p className="text-gray-300">
+                Understanding how people and systems interact
+              </p>
             </div>
           </div>
         </div>
-      </section>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Cosmic Search Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-900/40 via-primary-800/30 to-secondary-900/40">
-        <div className="container-custom">
+      <section className="relative overflow-hidden section-padding">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/FreeVectors.jpg" 
+            alt="Cosmic Background" 
+            className="w-full h-full object-cover shadow-2xl"
+          />
+        </div>
+        
+        <div className="container-custom relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold gradient-text mb-4">Explore the Cosmic Universe</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover insights, inspiration, and wisdom from our curated collection</p>
+            <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold text-white mb-4 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Explore the Cosmic Universe</h2>
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">Discover insights, inspiration, and wisdom from our curated collection</p>
           </div>
           <div className="mb-12">
             <CosmicSearch />
@@ -232,8 +238,8 @@ const Home = () => {
       <section className="section-padding bg-gradient-to-br from-primary-900/50 via-primary-800/40 to-secondary-900/50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold gradient-text mb-4">Curated Clusters</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Organized collections of wisdom and inspiration</p>
+            <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold text-white mb-4 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Curated Clusters</h2>
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">Organized collections of wisdom and inspiration</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {clusters.map((cluster, index) => (
@@ -256,11 +262,20 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-900/50 via-primary-800/40 to-secondary-900/50">
-        <div className="container-custom">
+      <section className="relative overflow-hidden section-padding">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/Le paysage nocturne des galaxies _ Photo Gratuite.jpg" 
+            alt="Cosmic Background" 
+            className="w-full h-full object-cover shadow-2xl"
+          />
+        </div>
+        
+        <div className="container-custom relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold mb-4">Our Core Services</h2>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold text-white mb-4 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Our Core Services</h2>
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
               Specialized solutions designed for your unique growth journey. We provide comprehensive support across business, personal, and financial domains.
             </p>
           </div>
@@ -278,6 +293,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
+      {/*
       <section className="section-padding bg-gradient-to-br from-primary-900/60 via-primary-800/50 to-secondary-900/60">
         <div className="container-custom">
           <div className="text-center mb-16">
@@ -310,8 +326,10 @@ const Home = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Venus Meditation Section */}
+      {/*
       <section className="section-padding bg-gradient-to-br from-primary-900/70 via-primary-800/60 to-secondary-900/70">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -323,9 +341,10 @@ const Home = () => {
           <VenusMeditation />
         </div>
       </section>
+      */}
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-primary-800 via-secondary-700 to-accent-500">
+      <section className="section-padding bg-black">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center text-white">
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm mb-8">
@@ -339,7 +358,7 @@ const Home = () => {
               Schedule your free consultation today and discover how our strategic solutions can drive your growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="btn-primary bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 text-lg">
+              <Link to="/contact" className="btn-primary bg-accent-500 text-white hover:bg-accent-600 px-8 py-4 text-lg">
                 Start Your Journey
               </Link>
               <Link to="/services" className="btn-outline border-white text-white hover:bg-white/10 px-8 py-4 text-lg">

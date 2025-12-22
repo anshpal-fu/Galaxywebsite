@@ -17,8 +17,17 @@ const CosmicFooter = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-primary-900 to-secondary-900 border-t border-white/10 pt-12 pb-6">
-      <div className="container-custom">
+    <footer className="relative overflow-hidden bg-black pt-12 pb-6">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img 
+          src="/New Time Scale For The History Of The Moon Published — Forbes.jpg" 
+          alt="Moon History Background" 
+          className="w-full h-full object-cover opacity-30"
+        />
+      </div>
+      
+      <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-1">
