@@ -5,7 +5,7 @@ const CosmicAbout = () => {
   const [activeTab, setActiveTab] = useState('vision');
 
   const tabs = [
-    { id: 'vision', name: 'Our Cosmic Vision' },
+    { id: 'vision', name: 'Our Vision' },
     { id: 'mission', name: 'Mission & Values' },
     /* { id: 'journey', name: 'Our Journey' }, - Commented out as per user request */
   ];
@@ -13,8 +13,8 @@ const CosmicAbout = () => {
   const teamMembers = [
     {
       name: 'Lyra Starweaver',
-      role: 'Chief Cosmic Officer',
-      bio: 'Bringing 15 years of experience in celestial alignment and cosmic strategy.',
+      role: 'Chief Officer',
+      bio: 'Bringing 15 years of experience in celestial alignment and strategy.',
       image: '👩‍🚀',
     },
     {
@@ -34,7 +34,7 @@ const CosmicAbout = () => {
   const values = [
     {
       title: 'Celestial Harmony',
-      description: 'Balancing earthly ambitions with cosmic wisdom for holistic growth.'
+      description: 'Balancing earthly ambitions with universal wisdom for holistic growth.'
     },
     {
       title: 'Creative Awakening',
@@ -46,7 +46,7 @@ const CosmicAbout = () => {
     },
     {
       title: 'Universal Connection',
-      description: 'Recognizing our place in the greater cosmic tapestry.'
+      description: 'Recognizing our place in the greater universal tapestry.'
     },
   ];
 
@@ -76,7 +76,7 @@ const CosmicAbout = () => {
         <div className="absolute inset-0">
           <img 
             src="/moon.jpg" 
-            alt="Cosmic Moon Background" 
+            alt="Moon Background" 
             className="w-full h-full object-cover opacity-40"
           />
         </div>
@@ -87,7 +87,7 @@ const CosmicAbout = () => {
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/30 backdrop-blur-sm border border-white/10 text-sm font-medium mb-6 animate-fade-up">
-              <span className="mr-2">✨</span> Cosmic Origins
+              <span className="mr-2">✨</span> Origins
             </div>
             <div className="animate-cosmic-entrance">
               <div className="inline-block p-6 rounded-2xl bg-black/40 backdrop-blur-sm border border-white/10 mb-6 w-full">
@@ -98,7 +98,7 @@ const CosmicAbout = () => {
               <div className="inline-block p-4 rounded-xl bg-black/30 backdrop-blur-sm border border-white/5 mb-12">
                 <p className="text-xl text-gray-100 max-w-3xl mx-auto drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
                   Our story began among the stars and continues to unfold with each client we guide toward 
-                  their cosmic potential.
+                  their potential.
                 </p>
               </div>
             </div>
@@ -144,11 +144,11 @@ const CosmicAbout = () => {
               {activeTab === 'vision' && (
                 <div className="space-y-6">
                   <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
-                    Our Cosmic Vision
+                    Our Vision
                   </h2>
                   <p className="text-gray-100 text-lg leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
                     We envision a world where individuals and organizations align with their highest potential 
-                    through the harmonious integration of earthly ambition and cosmic wisdom.
+                    through the harmonious integration of earthly ambition and  wisdom.
                   </p>
                   <p className="text-gray-100 text-lg leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
                     Inspired by Venus—the planet of beauty, love, and creativity—we believe that true success 
@@ -165,7 +165,7 @@ const CosmicAbout = () => {
                     <div className="glass-effect rounded-xl p-6">
                       <h3 className="text-xl font-semibold text-white mb-3 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">Holistic Growth</h3>
                       <p className="text-gray-100 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
-                        We nurture development that encompasses mind, body, spirit, and cosmic connection 
+                        We nurture development that encompasses mind, body, spirit, and connection 
                         for sustainable transformation.
                       </p>
                     </div>
@@ -179,7 +179,7 @@ const CosmicAbout = () => {
                     Mission & Values
                   </h2>
                   <p className="text-gray-100 text-lg leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
-                    Our mission is to empower visionary leaders and creative souls to unlock their cosmic 
+                    Our mission is to empower visionary leaders and creative souls to unlock their
                     potential through mindful strategies and Venusian wisdom.
                   </p>
                   
@@ -272,7 +272,7 @@ const CosmicAbout = () => {
         <div className="container-custom relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold mb-4">
-              <span className="text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Cosmic Guides</span>
+              <span className="text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Guides</span>
             </h2>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
               Meet the stellar team dedicated to illuminating your path through Venusian wisdom
@@ -321,24 +321,24 @@ const CosmicAbout = () => {
           <div className="max-w-4xl mx-auto text-center text-white">
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-black/30 backdrop-blur-sm border border-cyan-400/30 mb-8">
               <span className="mr-2">🚀</span>
-              Ready to Align with Your <span className="text-white">Cosmic Purpose</span>?
+              Ready to Align with Your <span className="text-white"> Purpose</span>?
             </div>
             <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold mb-6">
-              Ready to Align with Your <span className="text-cyan-400">Cosmic Purpose</span>?
+              Ready to Align with Your <span className="text-cyan-400">Purpose</span>?
             </h2>
             <p className="text-xl mb-10 opacity-90 max-w-2xl mx-auto">
               Join countless visionaries who have transformed their lives through Venus-inspired guidance
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="px-8 py-4 text-lg font-medium rounded-xl bg-gradient-to-r from-cyan-600 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/20">
-                Begin Your Cosmic Journey
+                Begin Your Journey
               </Link>
               <Link to="/contact" className="px-8 py-4 text-lg font-medium rounded-xl border border-cyan-400/50 text-white hover:bg-cyan-400/10 transition-all duration-300 backdrop-blur-sm">
                 Connect With Us
               </Link>
             </div>
             <p className="mt-8 text-white/80 text-sm">
-              No commitment required • 30-minute cosmic alignment • Customized Venusian strategy
+              No commitment required • 30-minute  alignment • Customized Venusian strategy
             </p>
           </div>
         </div>

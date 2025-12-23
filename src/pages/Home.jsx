@@ -389,7 +389,7 @@ const Home = () => {
           <div className="max-w-4xl mx-auto text-center text-white">
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-black/30 backdrop-blur-sm border border-cyan-400/30 mb-8">
               <span className="mr-2">🚀</span>
-              Ready to Align with Cosmic Forces?
+              Ready to Align with Forces?
             </div>
             <h2 className="text-3xl md:text-5xl font-[family-name:Playfair_Display] font-bold mb-8">
               Let's Turn Your Vision into <span className="text-cyan-400">Celestial Success</span>
@@ -399,7 +399,7 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="px-8 py-4 text-lg font-medium rounded-xl bg-gradient-to-r from-cyan-600 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/20">
-                Begin Your Cosmic Journey
+                Begin Your Journey
               </Link>
               <Link to="/services" className="px-8 py-4 text-lg font-medium rounded-xl border border-cyan-400/50 text-white hover:bg-cyan-400/10 transition-all duration-300 backdrop-blur-sm">
                 Explore Celestial Services

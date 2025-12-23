@@ -146,7 +146,7 @@ const Services = () => {
         <div className="container-custom relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-space font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">
-              COSMIC SERVICES
+              OUR SERVICES
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Explore our constellation of premium services designed to elevate your journey through business and personal transformation.
@@ -214,7 +214,7 @@ const Services = () => {
                     href={service.link}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-all duration-300 group"
                   >
-                    Explore Cosmic Journey
+                    Explore Journey
                     <svg className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
@@ -341,7 +341,7 @@ const Services = () => {
           <div className="max-w-4xl mx-auto text-center text-white">
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-black/30 backdrop-blur-sm border border-cyan-400/30 mb-8">
               <span className="mr-2">🚀</span>
-              Ready to Align with Cosmic Forces?
+              Ready to Align with Forces?
             </div>
             <h2 className="text-3xl md:text-5xl font-[family-name:Playfair_Display] font-bold mb-8">
               Let's Turn Your Vision into <span className="text-cyan-400">Celestial Success</span>
@@ -351,14 +351,14 @@ const Services = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="px-8 py-4 text-lg font-medium rounded-xl bg-gradient-to-r from-cyan-600 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/20">
-                Begin Your Cosmic Journey
+                Begin Your Journey
               </Link>
               <Link to="/services" className="px-8 py-4 text-lg font-medium rounded-xl border border-cyan-400/50 text-white hover:bg-cyan-400/10 transition-all duration-300 backdrop-blur-sm">
                 Explore Celestial Services
               </Link>
             </div>
             <p className="mt-8 text-white/80 text-sm">
-              No commitment required • 30-minute cosmic alignment • Customized Venusian strategy
+              No commitment required • 30-minute alignment • Customized Venusian strategy
             </p>
           </div>
         </div>
