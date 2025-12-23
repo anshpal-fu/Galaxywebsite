@@ -178,14 +178,14 @@ const Services = () => {
                       ))}
                     </div>
                     
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-700/50">
+                    <Link to="/contact" className="flex items-center justify-between pt-4 border-t border-gray-700/50 hover:border-cyan-400/50 transition-colors duration-300">
                       <span className="text-gray-300 font-medium">Explore</span>
                       <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
                         <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               );
