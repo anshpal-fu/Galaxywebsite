@@ -62,9 +62,9 @@ const About = () => {
         
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-sm font-medium mb-6">
+            {/* <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-sm font-medium mb-6">
               <span className="mr-2">✨</span> Cosmic Origins
-            </div>
+            </div> */}
             <h1 className="text-4xl md:text-5xl font-[family-name:Playfair_Display] font-bold text-white mb-6 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
               Aligned with <span className="gradient-text">Venusian Wisdom</span>
             </h1>
