@@ -118,7 +118,7 @@ const CosmicFooter = () => {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-gradient-to-br from-primary-900 to-secondary-900 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-black rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto scrollbar-hide border border-cyan-400/30">
             <div className="p-6">
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-2xl font-[family-name:Playfair_Display] font-bold text-white">
@@ -134,32 +134,32 @@ const CosmicFooter = () => {
               <div className="text-gray-300">
                 {modalContent === 'terms' ? (
                   <div>
-                    <h3 className="text-xl font-semibold mb-4">Terms of Service</h3>
-                    <p className="mb-4">Welcome to Venus Visions. These terms govern your use of our services and website.</p>
-                    <h4 className="text-lg font-semibold mb-2">1. Services</h4>
-                    <p className="mb-4">We provide business consulting, life coaching, and trade line services to help you achieve your goals.</p>
-                    <h4 className="text-lg font-semibold mb-2">2. User Responsibilities</h4>
-                    <p className="mb-4">You agree to provide accurate information and use our services in accordance with applicable laws.</p>
-                    <h4 className="text-lg font-semibold mb-2">3. Limitation of Liability</h4>
-                    <p className="mb-4">Our liability is limited to the fullest extent permitted by law.</p>
+                    <h3 className="text-xl font-semibold mb-4 text-white">Terms of Service</h3>
+                    <p className="mb-4 text-gray-300">Welcome to Venus Visions. These terms govern your use of our services and website.</p>
+                    <h4 className="text-lg font-semibold mb-2 text-white">1. Services</h4>
+                    <p className="mb-4 text-gray-300">We provide business consulting, life coaching, and trade line services to help you achieve your goals.</p>
+                    <h4 className="text-lg font-semibold mb-2 text-white">2. User Responsibilities</h4>
+                    <p className="mb-4 text-gray-300">You agree to provide accurate information and use our services in accordance with applicable laws.</p>
+                    <h4 className="text-lg font-semibold mb-2 text-white">3. Limitation of Liability</h4>
+                    <p className="mb-4 text-gray-300">Our liability is limited to the fullest extent permitted by law.</p>
                   </div>
                 ) : (
                   <div>
-                    <h3 className="text-xl font-semibold mb-4">Privacy Policy</h3>
-                    <p className="mb-4">Your privacy is important to us. This policy explains how we collect, use, and protect your information.</p>
-                    <h4 className="text-lg font-semibold mb-2">1. Information We Collect</h4>
-                    <p className="mb-4">We collect information you provide directly to us, such as when you contact us or use our services.</p>
-                    <h4 className="text-lg font-semibold mb-2">2. How We Use Information</h4>
-                    <p className="mb-4">We use your information to provide our services, communicate with you, and improve our offerings.</p>
-                    <h4 className="text-lg font-semibold mb-2">3. Data Protection</h4>
-                    <p className="mb-4">We implement industry-standard security measures to protect your information.</p>
+                    <h3 className="text-xl font-semibold mb-4 text-white">Privacy Policy</h3>
+                    <p className="mb-4 text-gray-300">Your privacy is important to us. This policy explains how we collect, use, and protect your information.</p>
+                    <h4 className="text-lg font-semibold mb-2 text-white">1. Information We Collect</h4>
+                    <p className="mb-4 text-gray-300">We collect information you provide directly to us, such as when you contact us or use our services.</p>
+                    <h4 className="text-lg font-semibold mb-2 text-white">2. How We Use Information</h4>
+                    <p className="mb-4 text-gray-300">We use your information to provide our services, communicate with you, and improve our offerings.</p>
+                    <h4 className="text-lg font-semibold mb-2 text-white">3. Data Protection</h4>
+                    <p className="mb-4 text-gray-300">We implement industry-standard security measures to protect your information.</p>
                   </div>
                 )}
               </div>
               <div className="mt-8 flex justify-end">
                 <button 
                   onClick={closeModal}
-                  className="btn-primary px-6 py-2"
+                  className="px-6 py-2 rounded-lg bg-gradient-to-r from-cyan-600 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-500 transition-all duration-300"
                 >
                   Close
                 </button>
