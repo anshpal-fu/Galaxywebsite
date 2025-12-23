@@ -6,7 +6,7 @@ import CosmicHero from '../components/CosmicHero.jsx'
 import CosmicCluster from '../components/CosmicCluster.jsx'
 import CosmicGallery from '../components/CosmicGallery.jsx'
 import CosmicSearch from '../components/CosmicSearch.jsx'
-import ContactForm from '../components/ContactForm.jsx'
+// import ContactForm from '../components/ContactForm.jsx'
 const Home = () => {
   const services = [
     {
@@ -347,7 +347,7 @@ const Home = () => {
       </section>
       */}
 
-      {/* Contact Form Section */}
+      {/* Contact Form Section
       <section className="relative section-padding bg-black overflow-hidden">
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-16">
@@ -360,7 +360,7 @@ const Home = () => {
             <ContactForm />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="relative section-padding bg-black overflow-hidden">
