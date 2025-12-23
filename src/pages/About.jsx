@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import React from 'react'
+
 
 const About = () => {
   const values = [
@@ -163,13 +165,13 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="section-padding bg-gray-50">
+      {/* <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold mb-4">Meet Our Team</h2>
             <p className="text-gray-600">The passionate professionals behind Venus Visions</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* <div className="grid md:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <div key={index} className="bg-white rounded-xl p-6 text-center card-hover">
                 <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
@@ -180,9 +182,9 @@ const About = () => {
                 <p className="text-gray-600">{member.bio}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div> */}
+        {/* </div>
+      </section> */} 
 
       {/* CTA */}
       <section className="section-padding bg-white">

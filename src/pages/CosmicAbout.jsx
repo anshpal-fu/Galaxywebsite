@@ -256,9 +256,9 @@ const CosmicAbout = () => {
       </section>
 
       {/* Team Section */}
-      <section className="relative overflow-hidden section-padding">
+      {/* <section className="relative overflow-hidden section-padding">
         {/* Background image */}
-        <div className="absolute inset-0">
+        {/* <div className="absolute inset-0">
           <img 
             src="/8.jpg" 
             alt="Cosmic Background" 
@@ -267,7 +267,7 @@ const CosmicAbout = () => {
         </div>
         
         {/* Overlay for better text visibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
         
         <div className="container-custom relative z-10">
           <div className="text-center mb-16">
@@ -277,8 +277,8 @@ const CosmicAbout = () => {
             <p className="text-xl text-gray-100 max-w-3xl mx-auto drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
               Meet the stellar team dedicated to illuminating your path through Venusian wisdom
             </p>
-          </div>
-          
+          </div> */} 
+{/*           
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {teamMembers.map((member, index) => (
               <div key={index} className="glass-effect rounded-2xl p-8 text-center card-hover">
@@ -292,7 +292,7 @@ const CosmicAbout = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */} 
 
       {/* Closing CTA */}
       <section className="relative section-padding bg-black overflow-hidden">

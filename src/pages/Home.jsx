@@ -263,7 +263,7 @@ const Home = () => {
       */}
 
       {/* Services Section */}
-      <section className="relative overflow-hidden section-padding">
+      <section className="relative section-padding bg-black overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0">
           <img 
@@ -278,18 +278,59 @@ const Home = () => {
         
         <div className="container-custom relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold text-white mb-4 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Our Core Services</h2>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
+            <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold text-white mb-4">Our Core Services</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Specialized solutions designed for your unique growth journey. We provide comprehensive support across business, personal, and financial domains.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <CosmicServiceCard key={index} {...service} />
+              <div 
+                key={index}
+                className="relative group rounded-2xl bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 backdrop-blur-xl border border-white/20 overflow-hidden transition-all duration-500 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-500/20"
+              >
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                
+                <div className="p-8 relative z-10">
+
+                  
+                  {/* Title */}
+                  <h3 className="text-2xl font-bold text-white mb-6 font-[family-name:Playfair_Display]">
+                    {service.title}
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  {/* Features */}
+                  <div className="mb-6 space-y-3">
+                    {service.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-start">
+                        <div className="w-2 h-2 bg-cyan-400 rounded-full mt-3 mr-3 flex-shrink-0"></div>
+                        <span className="text-gray-300">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* CTA */}
+                  <Link 
+                    to={service.link}
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 group-hover:text-cyan-300"
+                  >
+                    Explore Journey 
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                  </Link>
+                </div>
+              </div>
             ))}
           </div>
+          
           <div className="text-center mt-12">
-            <Link to="/services" className="btn-primary">
+            <Link to="/services" className="px-8 py-4 text-lg font-medium rounded-xl bg-gradient-to-r from-cyan-600 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/20">
               View All Services
             </Link>
           </div>

@@ -135,96 +135,61 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="relative overflow-hidden py-20 bg-gradient-to-br from-gray-900 via-indigo-900 to-black">
-        {/* Cosmic background effects */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500 rounded-full mix-blend-soft-light filter blur-3xl opacity-30 animate-pulse"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-cyan-500 rounded-full mix-blend-soft-light filter blur-3xl opacity-20 animate-pulse delay-1000"></div>
-          <div className="absolute top-1/3 right-1/3 w-48 h-48 bg-indigo-500 rounded-full mix-blend-soft-light filter blur-3xl opacity-25 animate-pulse delay-1500"></div>
-        </div>
-        
-        <div className="container-custom relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-space font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">
+      <section className="py-20 bg-black">
+        <div className="container-custom">
+          {/* <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               OUR SERVICES
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our constellation of premium services designed to elevate your journey through business and personal transformation.
+              Explore our range of services designed to elevate your business and personal growth.
             </p>
-          </div>
+          </div> */}
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {filteredServices.map((service, index) => (
-              <div 
-                key={index}
-                className="group relative bg-black backdrop-blur-xl rounded-3xl border border-cyan-400/30 p-8 transition-all duration-700 ease-out hover:scale-[1.02] hover:border-cyan-400/50 overflow-hidden"
-              >
-                {/* Animated background stars */}
-                <div className="absolute inset-0 overflow-hidden rounded-3xl">
-                  {[...Array(15)].map((_, i) => (
-                    <div 
-                      key={i}
-                      className="absolute rounded-full bg-cyan-400 animate-pulse"
-                      style={{
-                        width: `${Math.random() * 3 + 1}px`,
-                        height: `${Math.random() * 3 + 1}px`,
-                        top: `${Math.random() * 100}%`,
-                        left: `${Math.random() * 100}%`,
-                        opacity: Math.random() * 0.7 + 0.3,
-                        animationDuration: `${Math.random() * 3 + 2}s`
-                      }}
-                    ></div>
-                  ))}
-                </div>
-                
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl"></div>
-                
-                {/* Glow effect */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl -z-10"></div>
-                
-                {/* Card content */}
-                <div className="relative z-10">
-                  {/* Venus symbol header */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-purple-500 flex items-center justify-center text-white">
-                      ♀
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {filteredServices.map((service, index) => {
+              // Define pastel colors for each card
+              const pastelColors = [
+                'bg-blue-500/20', // Light blue
+                'bg-orange-500/20', // Peach
+                'bg-purple-500/20', // Lavender
+                'bg-green-500/20'  // Mint
+              ];
+              
+              // Define some sample tags for each service
+              const serviceTags = [
+                ['UI/UX Design', 'Prototyping', 'User Research'],
+                ['Brand Identity', 'Print Design', 'Illustration'],
+                ['SEO Strategy', 'Content Marketing', 'Social Media'],
+                ['Financial Planning', 'Investment', 'Risk Management']
+              ];
+              
+              return (
+                <div key={index} className="p-6">
+                  <div className={`${pastelColors[index]} rounded-2xl shadow-sm p-6 h-full transition-all duration-300 hover:shadow-md`}>
+                    <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
+                    <p className="text-gray-200 mb-4">{service.description}</p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {serviceTags[index].map((tag, tagIndex) => (
+                        <span key={tagIndex} className="px-3 py-1 bg-white/10 rounded-full text-sm text-gray-200">
+                          {tag}
+                        </span>
+                      ))}
                     </div>
-                    <div className="h-px flex-1 bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent ml-4"></div>
+                    
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-700/50">
+                      <span className="text-gray-300 font-medium">Explore</span>
+                      <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                        <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
-                  
-                  <h3 className="text-2xl font-space font-bold text-white group-hover:text-cyan-300 transition-all duration-300 mb-6">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {service.features.slice(0, 3).map((feature, featIndex) => (
-                      <li key={featIndex} className="flex items-start">
-                        <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2 mr-4 filter drop-shadow-[0_0_4px_rgba(0,255,255,0.7)]"></div>
-                        <span className="text-gray-200 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <a 
-                    href={service.link}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-all duration-300 group"
-                  >
-                    Explore Journey
-                    <svg className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
-                  </a>
                 </div>
-                
-                {/* Corner accent */}
-                <div className="absolute top-0 right-0 w-20 h-20 rounded-bl-full bg-gradient-to-b from-cyan-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
