@@ -318,7 +318,7 @@ const Home = () => {
                   
                   {/* CTA */}
                   <Link 
-                    to={service.link}
+                    to="/contact"
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 group-hover:text-cyan-300"
                   >
                     Explore Journey 
