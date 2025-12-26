@@ -4,7 +4,7 @@ const Contact = () => {
   const contactInfo = [
     {
       title: 'Email',
-      details: ['alonzo.hayes01@gmail.com'],
+      details: ['alonzohayes01@gmail.com'],
       link: 'mailto:alonzo.hayes01@gmail.com'
     },
     {
@@ -36,7 +36,7 @@ const Contact = () => {
     setResult("");
 
     const formData = new FormData(event.target);
-    formData.append("access_key", "b0cfa795-2076-4023-abec-64287e3310fc");
+    formData.append("access_key", "813981e0-c454-4433-a480-819440169b19");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
