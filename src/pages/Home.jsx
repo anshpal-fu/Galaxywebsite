@@ -171,7 +171,7 @@ const Home = () => {
             <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold mb-4">
               Our Mission
             </h2>
-            <p className="text-lg text-gray-200">
+            <p className="text-lg text-white">
               At Venus Visions, our mission is to empower businesses and individuals by delivering creative,
               strategic solutions to complex challenges.
             </p>
@@ -182,21 +182,21 @@ const Home = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <div>
               <h4 className="font-semibold text-white mb-3">Clear Communication</h4>
-              <p className="text-gray-300">
+              <p className="text-white">
                 Transparent dialogue that builds trust and understanding
               </p>
             </div>
 
             <div>
               <h4 className="font-semibold text-white mb-3">Strategic Insight</h4>
-              <p className="text-gray-300">
+              <p className="text-white">
                 Data-driven decisions that create competitive advantages
               </p>
             </div>
 
             <div>
               <h4 className="font-semibold text-white mb-3">System Integration</h4>
-              <p className="text-gray-300">
+              <p className="text-white">
                 Understanding how people and systems interact
               </p>
             </div>
@@ -279,7 +279,7 @@ const Home = () => {
         <div className="container-custom relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-[family-name:Playfair_Display] font-bold text-white mb-4">Our Core Services</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Specialized solutions designed for your unique growth journey. We provide comprehensive support across business, personal, and financial domains.
             </p>
           </div>
@@ -302,7 +302,7 @@ const Home = () => {
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-white mb-6 leading-relaxed">
                     {service.description}
                   </p>
                   
@@ -311,7 +311,7 @@ const Home = () => {
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mt-3 mr-3 flex-shrink-0"></div>
-                        <span className="text-gray-300">{feature}</span>
+                        <span className="text-white">{feature}</span>
                       </div>
                     ))}
                   </div>

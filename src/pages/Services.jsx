@@ -168,18 +168,18 @@ const Services = () => {
                 <div key={index} className="p-6">
                   <div className={`${pastelColors[index]} rounded-2xl shadow-sm p-6 h-full transition-all duration-300 hover:shadow-md`}>
                     <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-200 mb-4">{service.description}</p>
+                    <p className="text-white mb-4">{service.description}</p>
                     
                     <div className="flex flex-wrap gap-2 mb-6">
                       {serviceTags[index].map((tag, tagIndex) => (
-                        <span key={tagIndex} className="px-3 py-1 bg-white/10 rounded-full text-sm text-gray-200">
+                        <span key={tagIndex} className="px-3 py-1 bg-white/10 rounded-full text-sm text-white">
                           {tag}
                         </span>
                       ))}
                     </div>
                     
                     <Link to="/contact" className="flex items-center justify-between pt-4 border-t border-gray-700/50 hover:border-cyan-400/50 transition-colors duration-300">
-                      <span className="text-gray-300 font-medium">Explore</span>
+                      <span className="text-white font-medium">Explore</span>
                       <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
                         <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -205,7 +205,7 @@ const Services = () => {
         <div className="container-custom relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold mb-4 text-white">Our Process</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               A structured approach that ensures clarity, efficiency, and measurable results at every stage of our engagement.
             </p>
           </div>
@@ -215,7 +215,7 @@ const Services = () => {
                 <div className="bg-gray-900/30 backdrop-blur-sm rounded-2xl p-8 shadow-lg h-full border border-gray-700/30 transition-all duration-300 hover:border-cyan-400/50 hover:shadow-cyan-400/20 hover:shadow-xl">
                   <div className="text-4xl font-bold text-cyan-300 mb-4 transition-all duration-300 group-hover:text-white">{step.number}</div>
                   <h3 className="text-xl font-semibold mb-4 text-white transition-all duration-300 group-hover:text-cyan-200">{step.title}</h3>
-                  <p className="text-gray-300 transition-all duration-300 group-hover:text-gray-100">{step.description}</p>
+                  <p className="text-white transition-all duration-300 group-hover:text-gray-100">{step.description}</p>
                 </div>
                 {index < processSteps.length - 1 && (
                   <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-cyan-400"></div>

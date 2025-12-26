@@ -68,7 +68,7 @@ const About = () => {
             <h1 className="text-4xl md:text-5xl font-[family-name:Playfair_Display] font-bold text-white mb-6 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
               Aligned with <span className="gradient-text">Venusian Wisdom</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
+            <p className="text-xl text-white mb-8 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
               Our story began among the stars and continues to unfold with each client we guide toward 
               their cosmic potential.
             </p>
@@ -112,7 +112,7 @@ const About = () => {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold mb-4 text-white">Our Cosmic Principles</h2>
-            <p className="text-gray-100 max-w-2xl mx-auto">The celestial foundations that guide our cosmic journey and every solution we provide</p>
+            <p className="text-white max-w-2xl mx-auto">The celestial foundations that guide our cosmic journey and every solution we provide</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
@@ -121,7 +121,7 @@ const About = () => {
                   <span className="text-2xl text-white">{value.icon}</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-white">{value.title}</h3>
-                <p className="text-gray-100">{value.description}</p>
+                <p className="text-white">{value.description}</p>
               </div>
             ))}
           </div>
@@ -134,11 +134,11 @@ const About = () => {
           <div className="max-w-4xl mx-auto glass-effect rounded-2xl p-8 md:p-12">
             <div className="text-4xl mb-6 text-accent-300">✨</div>
             <h2 className="text-3xl font-[family-name:Playfair_Display] font-bold mb-6 text-white">Our Cosmic Mission</h2>
-            <blockquote className="text-xl italic mb-8 text-gray-100">
+            <blockquote className="text-xl italic mb-8 text-white">
               "To empower beings by aligning earthly ambitions with celestial wisdom, delivering creative solutions to universal challenges."
             </blockquote>
             <div className="space-y-4">
-              <p className="text-gray-100">We believe in:</p>
+              <p className="text-white">We believe in:</p>
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <svg className="w-5 h-5 mr-3 text-accent-300" fill="currentColor" viewBox="0 0 20 20">
