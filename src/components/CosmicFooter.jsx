@@ -48,7 +48,7 @@ const CosmicFooter = () => {
                 alt="Venus Visions Logo" 
                 className="w-8 h-8 object-contain"
               />
-              <span className="text-lg font-[family-name:Playfair_Display] font-bold gradient-text">
+              <span className="text-xl font-[family-name:Playfair_Display] font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
                 Venus Visions
               </span>
             </Link>

@@ -32,7 +32,7 @@ const Footer = () => {
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
                   <span className="text-white font-bold text-xl">VV</span>
                 </div>
-                <span className="text-xl font-[family-name:Playfair_Display] font-bold">Venus Visions</span>
+                <span className="text-xl font-[family-name:Playfair_Display] font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Venus Visions</span>
               </Link>
               <p className="text-gray-400 mb-6">
                 Empowering businesses and individuals through strategic solutions for sustainable growth.
