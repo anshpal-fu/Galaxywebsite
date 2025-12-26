@@ -35,7 +35,7 @@
   }
   
   body {
-    @apply font-sans text-gray-200 bg-gradient-to-br from-primary-900 via-primary-700 to-secondary-900 min-h-screen;
+    @apply font-sans text-white bg-gradient-to-br from-primary-900 via-primary-700 to-secondary-900 min-h-screen;
   }
   
   h1, h2, h3, h4 {

@@ -52,7 +52,7 @@ const CosmicFooter = () => {
                 Venus Visions
               </span>
             </Link>
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-white text-sm mb-4">
               Empowering businesses and individuals through creative, strategic solutions.
             </p>
           </div>
@@ -65,7 +65,7 @@ const CosmicFooter = () => {
                 <li key={index}>
                   <Link 
                     to={link.path} 
-                    className="text-gray-400 hover:text-accent-300 transition-colors duration-300 text-sm"
+                    className="text-white hover:text-accent-300 transition-colors duration-300 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -82,7 +82,7 @@ const CosmicFooter = () => {
                 <li key={index}>
                   <Link 
                     to={service.path} 
-                    className="text-gray-400 hover:text-accent-300 transition-colors duration-300 text-sm"
+                    className="text-white hover:text-accent-300 transition-colors duration-300 text-sm"
                   >
                     {service.name}
                   </Link>
@@ -94,19 +94,19 @@ const CosmicFooter = () => {
 
         <div className="border-t border-white/10 pt-6 mt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-500 text-sm">
+            <p className="text-white text-sm">
               &copy; {currentYear} Venus Visions. All rights reserved.
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <button 
                 onClick={() => openModal('privacy')}
-                className="text-gray-500 hover:text-gray-400 text-sm"
+                className="text-white hover:text-gray-300 text-sm"
               >
                 Privacy
               </button>
               <button 
                 onClick={() => openModal('terms')}
-                className="text-gray-500 hover:text-gray-400 text-sm"
+                className="text-white hover:text-gray-300 text-sm"
               >
                 Terms
               </button>
